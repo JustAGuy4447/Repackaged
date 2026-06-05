@@ -38,7 +38,8 @@ public class RepackagedBlocks {
             .mapColor(MapColor.TERRACOTTA_YELLOW)
             .sound(SoundType.AMETHYST),
             RepackagedBlockEntityTypes.BATTERY_CHARGER::get,
-            Capabilities.EnergyStorage.BLOCK
+            Capabilities.EnergyStorage.BLOCK,
+            Optional.of(RepackagedPartialModels.BATTERY_CHARGER_TRAY)
     ));
 
     public static final DeferredBlock<PackageShelfBlock> PACKAGE_SHELF = BLOCKS.register("package_shelf", () -> new PackageShelfBlock(BlockBehaviour.Properties.ofFullCopy(SharedProperties.softMetal())
