@@ -10,6 +10,7 @@ public class RepackagedPartialModels {
             FLUID_PANEL = block("fluid_gauge"),
             ENERGY_PANEL = block("energy_gauge"),
             FLUID_PACKAGER_TRAY = block("fluid_packager/tray"),
+            BATTERY_CHARGER_TRAY = block("battery_charger/tray"),
             TEMPLATE_BATTERY = block("battery_template");
 
 

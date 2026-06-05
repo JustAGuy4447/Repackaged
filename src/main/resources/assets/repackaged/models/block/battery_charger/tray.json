@@ -1,0 +1,31 @@
+{
+	"credit": "Made with Blockbench",
+	"render_type": "cutout",
+	"textures": {
+		"0": "repackaged:block/battery_charger",
+		"particle": "repackaged:block/battery_charger_particle"
+	},
+	"elements": [
+		{
+			"from": [2, 2, 2],
+			"to": [14, 4, 14],
+			"rotation": {"angle": 0, "axis": "y", "origin": [2, 2, 2]},
+			"faces": {
+				"north": {"uv": [8.5, 15.25, 11.5, 15.75], "texture": "#0"},
+				"east": {"uv": [8.5, 15.25, 11.5, 15.75], "texture": "#0"},
+				"south": {"uv": [8.5, 15.25, 11.5, 15.75], "texture": "#0"},
+				"west": {"uv": [8.5, 15.25, 11.5, 15.75], "texture": "#0"},
+				"up": {"uv": [8.5, 12.5, 11.5, 15.5], "texture": "#0"},
+				"down": {"uv": [12.5, 12.5, 15.5, 15.5], "texture": "#0"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "sled",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [0]
+		}
+	]
+}
