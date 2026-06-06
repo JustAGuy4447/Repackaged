@@ -50,6 +50,7 @@ public class RepackagedRecipeProvider extends RecipeProvider implements IConditi
                 .define('b', AllBlocks.CARDBOARD_BLOCK)
                 .define('c', Items.REDSTONE)
                 .unlockedBy("has_brass_ingot", has(AllItems.BRASS_INGOT)).save(output);
+        
         ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, RepackagedBlocks.PACKAGE_SHELF)
                 .pattern("a").pattern("b")
                 .define('a', AllItems.ELECTRON_TUBE)
