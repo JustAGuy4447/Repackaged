@@ -42,7 +42,7 @@
   "repackaged.ponder.package_shelf.text_7": "...the shelf can be increased by adding another block on top",
   "repackaged.ponder.packager_connector.header": "Sort your packages with a package connector",
   "repackaged.ponder.packager_connector.text_1": "Sorting your packages with chutes can sometimes be tricky, especially in horizontal setups.",
-  "repackaged.ponder.packager_connector.text_2": "Place the connectors on your packagers...",
+  "repackaged.ponder.packager_connector.text_2": "Place the connectors on your packagers and configure the connection with a Wrench...",
   "repackaged.ponder.packager_connector.text_3": "...any rejected package will now travel on the line until it finds a valid packager!",
   "repackaged.ponder.packager_connector.text_4": "Any connector facing a non-packager block will skip to the next one",
   "repackaged.ponder.stacked_packagers.header": "Stack your packagers to sort different items",

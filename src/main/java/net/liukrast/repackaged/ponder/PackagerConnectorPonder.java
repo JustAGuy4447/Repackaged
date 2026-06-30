@@ -44,16 +44,18 @@ public class PackagerConnectorPonder implements Ponder {
 
         scene.world().showIndependentSection(util.select().fromTo(4,1,2, 2,1,2), Direction.SOUTH);
         scene.idle(10);
-        displayText(scene, util.grid().at(4,1,2), 50, true);
+        displayText(scene, util.grid().at(4,1,2), 75, true);
 
         scene.overlay()
                 .showControls(new Vec3(4.5,1.5,3), Pointing.DOWN, 20)
+                .rightClick()
                 .withItem(AllItems.WRENCH.asStack());
         scene.world().setBlock(util.grid().at(4,1,2), RepackagedBlocks.PACKAGER_CONNECTOR.get().defaultBlockState().setValue(PackagerConnectorBlock.POINTING, Direction.WEST), true);
         scene.world().setBlock(util.grid().at(3,1,2), RepackagedBlocks.PACKAGER_CONNECTOR.get().defaultBlockState().setValue(PackagerConnectorBlock.POINTED_W, true), true);
         scene.idle(30);
         scene.overlay()
                 .showControls(new Vec3(3.5,1.5,3), Pointing.DOWN, 20)
+                .rightClick()
                 .withItem(AllItems.WRENCH.asStack());
         scene.world().setBlock(util.grid().at(3,1,2), RepackagedBlocks.PACKAGER_CONNECTOR.get().defaultBlockState().setValue(PackagerConnectorBlock.POINTED_W, true).setValue(PackagerConnectorBlock.POINTING, Direction.WEST), true);
         scene.world().setBlock(util.grid().at(2,1,2), RepackagedBlocks.PACKAGER_CONNECTOR.get().defaultBlockState().setValue(PackagerConnectorBlock.POINTED_W, true), true);
@@ -80,6 +82,7 @@ public class PackagerConnectorPonder implements Ponder {
         scene.idle(30);
         scene.overlay()
                 .showControls(new Vec3(2.5,1.5,3), Pointing.DOWN, 20)
+                .rightClick()
                 .withItem(AllItems.WRENCH.asStack());
         scene.world().setBlock(util.grid().at(2,1,2), RepackagedBlocks.PACKAGER_CONNECTOR.get().defaultBlockState().setValue(PackagerConnectorBlock.POINTED_W, true).setValue(PackagerConnectorBlock.POINTING, Direction.WEST), true);
         scene.world().setBlock(util.grid().at(1,1,2), RepackagedBlocks.PACKAGER_CONNECTOR.get().defaultBlockState().setValue(PackagerConnectorBlock.POINTED_W, true), true);

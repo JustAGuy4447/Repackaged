@@ -91,7 +91,7 @@ public class RepackagedLanguageProvider extends DeployerLanguageProviderImpl {
                 RepackagedBlocks.PACKAGER_CONNECTOR.asItem(),
                 "Sort your packages with a package connector",
                 "Sorting your packages with chutes can sometimes be tricky, especially in horizontal setups.",
-                "Place the connectors on your packagers...",
+                "Place the connectors on your packagers and configure the connection with a Wrench...",
                 "...any rejected package will now travel on the line until it finds a valid packager!",
                 "Any connector facing a non-packager block will skip to the next one"
         );
