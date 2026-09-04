@@ -2,9 +2,9 @@ package net.liukrast.repackaged.content.fluid;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.simibubi.create.content.logistics.BigItemStack;
-import com.simibubi.create.content.logistics.stockTicker.StockKeeperRequestMenu;
 import com.simibubi.create.foundation.gui.AllGuiTextures;
 import net.liukrast.deployer.lib.helper.GuiRenderingHelpers;
+import net.liukrast.deployer.lib.logistics.packager.screen.KeeperMenu;
 import net.liukrast.deployer.lib.logistics.packager.screen.KeeperSourceContext;
 import net.liukrast.deployer.lib.logistics.packager.screen.StockTabScreen;
 import net.liukrast.repackaged.Repackaged;
@@ -28,7 +28,7 @@ import java.util.Optional;
 
 public class FluidTabScreen extends StockTabScreen<Fluid, FluidStack> {
     private static final ResourceLocation TEXTURE = Repackaged.CONSTANTS.id("textures/gui/fluid_stock_inventory.png");
-    public FluidTabScreen(KeeperSourceContext context, StockKeeperRequestMenu menu) {
+    public FluidTabScreen(KeeperSourceContext context, KeeperMenu<?> menu) {
         super(context, menu, RepackagedItems.STANDARD_BOTTLES.getFirst().asItem(), RepackagedStockInventoryTypes.FLUID.get());
     }
 

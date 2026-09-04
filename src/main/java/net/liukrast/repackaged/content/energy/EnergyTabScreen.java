@@ -1,9 +1,9 @@
 package net.liukrast.repackaged.content.energy;
 
-import com.simibubi.create.content.logistics.stockTicker.StockKeeperRequestMenu;
 import net.liukrast.deployer.lib.helper.GuiRenderingHelpers;
 import net.liukrast.deployer.lib.logistics.packager.AbstractInventorySummary;
 import net.liukrast.deployer.lib.logistics.packager.StockInventoryType;
+import net.liukrast.deployer.lib.logistics.packager.screen.KeeperMenu;
 import net.liukrast.deployer.lib.logistics.packager.screen.KeeperSourceContext;
 import net.liukrast.deployer.lib.logistics.packager.screen.KeeperTabScreen;
 import net.liukrast.deployer.lib.logistics.packager.screen.ProvidesOrder;
@@ -39,7 +39,7 @@ public class EnergyTabScreen extends KeeperTabScreen implements ProvidesOrder<En
     private int cached = 0;
     public int amountToOrder = 0;
 
-    public EnergyTabScreen(KeeperSourceContext context, StockKeeperRequestMenu menu) {
+    public EnergyTabScreen(KeeperSourceContext context, KeeperMenu<?> menu) {
         super(context, menu, Component.translatable("stock_inventory_type.repackaged.energy"), RepackagedItems.STANDARD_BATTERIES.getFirst().asItem());
     }
 
