@@ -96,7 +96,7 @@ public class EnergyPanelBehaviour extends StockPanelBehaviour<Energy, EnergyStac
     @Override
     public Component getPromisedComponent(int amount) {
         return Component.translatable("stock_inventory_type.repackaged.energy")
-                .copy().append(" x" + amount + "Mb");
+                .copy().append(" x" + amount + "⚡");
     }
 
     @Override
