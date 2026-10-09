@@ -5,6 +5,8 @@ import com.simibubi.create.content.logistics.factoryBoard.FactoryPanelBlock;
 import com.simibubi.create.content.logistics.factoryBoard.FactoryPanelBlockEntity;
 import com.simibubi.create.foundation.blockEntity.behaviour.ValueBox;
 import dev.engine_room.flywheel.lib.model.baked.PartialModel;
+import net.liukrast.deployer.lib.blockEntity.behaviour.advancedValueSettings.AdvancedValueSettingsBehaviour;
+import net.liukrast.deployer.lib.blockEntity.behaviour.advancedValueSettings.RowData;
 import net.liukrast.deployer.lib.logistics.IPromiseVisuals;
 import net.liukrast.deployer.lib.logistics.board.PanelType;
 import net.liukrast.deployer.lib.logistics.board.StockPanelBehaviour;
@@ -23,9 +25,10 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.BlockHitResult;
 
+import java.util.List;
 import java.util.Optional;
 
-public class EnergyPanelBehaviour extends StockPanelBehaviour<Energy, EnergyStack> implements IPromiseVisuals {
+public class EnergyPanelBehaviour extends StockPanelBehaviour<Energy, EnergyStack> implements IPromiseVisuals, AdvancedValueSettingsBehaviour {
     private static final Multiplier[] MULTIPLIERS = {
             new Multiplier("⚡", 1, 10),
             new Multiplier("k⚡", 1_000),
@@ -112,6 +115,16 @@ public class EnergyPanelBehaviour extends StockPanelBehaviour<Energy, EnergyStac
     @Override
     public boolean shouldSnap() {
         return true;
+    }
+
+    @Override
+    public boolean valueEditBoxEnabled() {
+        return true;
+    }
+
+    @Override
+    public List<RowData> getRowData() {
+        return getRowData(2000);
     }
 }
 

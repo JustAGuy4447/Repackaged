@@ -8,6 +8,8 @@ import com.simibubi.create.content.logistics.filter.FilterItemStack;
 import com.simibubi.create.foundation.blockEntity.behaviour.ValueBox;
 import dev.engine_room.flywheel.lib.model.baked.PartialModel;
 import net.createmod.catnip.platform.NeoForgeCatnipServices;
+import net.liukrast.deployer.lib.blockEntity.behaviour.advancedValueSettings.AdvancedValueSettingsBehaviour;
+import net.liukrast.deployer.lib.blockEntity.behaviour.advancedValueSettings.RowData;
 import net.liukrast.deployer.lib.helper.box.FluidValueBox;
 import net.liukrast.deployer.lib.logistics.IPromiseVisuals;
 import net.liukrast.deployer.lib.logistics.board.PanelType;
@@ -28,7 +30,9 @@ import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
 import net.neoforged.neoforge.fluids.FluidStack;
 
-public class FluidPanelBehaviour extends StockPanelBehaviour<Fluid, FluidStack> implements IPromiseVisuals {
+import java.util.List;
+
+public class FluidPanelBehaviour extends StockPanelBehaviour<Fluid, FluidStack> implements IPromiseVisuals, AdvancedValueSettingsBehaviour {
     private static final Multiplier[] MULTIPLIERS = {
             new Multiplier("mB", 1, 10),
             new Multiplier("B", 1_000),
@@ -117,5 +121,15 @@ public class FluidPanelBehaviour extends StockPanelBehaviour<Fluid, FluidStack> 
     @Override
     public ItemStack getPromisedBox() {
         return RepackagedItems.STANDARD_BOTTLES.getFirst().toStack();
+    }
+
+    @Override
+    public boolean valueEditBoxEnabled() {
+        return true;
+    }
+
+    @Override
+    public List<RowData> getRowData() {
+        return getRowData(2000);
     }
 }
