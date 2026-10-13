@@ -8,7 +8,6 @@ import com.simibubi.create.content.logistics.filter.FilterItemStack;
 import com.simibubi.create.foundation.blockEntity.behaviour.ValueBox;
 import dev.engine_room.flywheel.lib.model.baked.PartialModel;
 import net.createmod.catnip.platform.NeoForgeCatnipServices;
-import net.liukrast.deployer.lib.blockEntity.behaviour.advancedValueSettings.AdvancedValueSettingsBehaviour;
 import net.liukrast.deployer.lib.blockEntity.behaviour.advancedValueSettings.RowData;
 import net.liukrast.deployer.lib.helper.box.FluidValueBox;
 import net.liukrast.deployer.lib.logistics.IPromiseVisuals;
@@ -32,7 +31,7 @@ import net.neoforged.neoforge.fluids.FluidStack;
 
 import java.util.List;
 
-public class FluidPanelBehaviour extends StockPanelBehaviour<Fluid, FluidStack> implements IPromiseVisuals, AdvancedValueSettingsBehaviour {
+public class FluidPanelBehaviour extends StockPanelBehaviour<Fluid, FluidStack> implements IPromiseVisuals {
     private static final Multiplier[] MULTIPLIERS = {
             new Multiplier("mB", 1, 10),
             new Multiplier("B", 1_000),
