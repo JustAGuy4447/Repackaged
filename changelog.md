@@ -5,7 +5,11 @@ Fixes
 - [Package Shelves crash when wrenched](https://github.com/LIUKRAST/Repackaged/issues/15)
 - [Bottles & Batteries voiding on saws and when right-clicked](https://github.com/LIUKRAST/Repackaged/issues/7)
 - [Rare bottles are missing models and translation key](https://github.com/LIUKRAST/Repackaged/issues/21)
+- [Missing Packager Connector recipe](https://github.com/LIUKRAST/Repackaged/issues/25)
+- [Battery Charger model has Z-fighting](https://github.com/LIUKRAST/Repackaged/issues/29)
 
 Features
 - [Configurable bottle jar capacity](https://github.com/LIUKRAST/Repackaged/issues/16)
 - Batteries will now spawn a lightning when opened if they contain more than 100.000⚡ (configurable)
+- ValueEditBox implementation
+- New Chinese (simplified), Russian, Japanese and German localisation
